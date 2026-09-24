@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="RideMatchingSystem.API/RideMatchingSystem.API.csproj" />
+  <Project Path="RideMatchingSystem.Application/RideMatchingSystem.Application.csproj" />
+  <Project Path="RideMatchingSystem.Domain/RideMatchingSystem.Domain.csproj" />
+  <Project Path="RideMatchingSystem.Infrastructure/RideMatchingSystem.Infrastructure.csproj" />
+</Solution>
