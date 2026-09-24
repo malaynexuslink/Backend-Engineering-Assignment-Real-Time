@@ -1,7 +1,3 @@
-# Backend-Engineering-Assignment-Real-Time
-Ride Matching System - Design and build a backend system for a real-time ride matching platform. The system should support riders requesting rides and drivers becoming available in real time.
-
-
 # Real-Time Ride Matching Backend Engine
 
 A scalable, highly concurrent, asynchronous ride-matching backend system built with **ASP.NET Core 8.0**. This solution is designed for cloud-native deployment, focusing on strict concurrency control, non-blocking background processing, spatial efficiency, and mobile-optimized push notifications.
