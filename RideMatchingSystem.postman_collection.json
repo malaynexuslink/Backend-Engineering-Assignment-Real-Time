@@ -1,0 +1,108 @@
+{
+	"info": {
+		"name": "Ride Matching System API",
+		"description": "API collection for the Real-Time Ride Matching backend assignment.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Get Available Drivers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/drivers/available",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"drivers",
+						"available"
+					]
+				}
+			}
+		},
+		{
+			"name": "2. Update Driver Location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"latitude\": 23.0230,\n  \"longitude\": 72.5720\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/drivers/11111111-1111-1111-1111-111111111111/location",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"drivers",
+						"11111111-1111-1111-1111-111111111111",
+						"location"
+					]
+				}
+			}
+		},
+		{
+			"name": "3. Request a Ride",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"riderId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"riderFcmToken\": \"mock-device-token-123\",\n  \"pickupLatitude\": 23.0226,\n  \"pickupLongitude\": 72.5715,\n  \"dropoffLatitude\": 23.0300,\n  \"dropoffLongitude\": 72.5800\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/rides",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"rides"
+					]
+				}
+			}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
